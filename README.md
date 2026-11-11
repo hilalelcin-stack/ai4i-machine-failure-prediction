@@ -14,7 +14,14 @@ Veri: [UCI AI4I 2020 Predictive Maintenance Dataset](https://archive.ics.uci.edu
 | `ai4i_ariza_tahmini.py` | Bütün analiz tek dosyada. Bölüm başlıkları rapordaki etiketlerle aynı (`SORU 1a` … `SORU 3c`) |
 | `ai4i2020.csv` | UCI'den indirilen ham veri (değiştirilmedi) |
 | `requirements.txt` | Kütüphane sürümleri |
-| `AI4I_Ariza_Tahmini_HilalElcinSahin.zip` | Yukarıdakilerin hepsi tek pakette (mail eki) |
+| `outputs/grafikler/` | Rapordaki grafikler: `soru1.png`, `soru2_karar_agaci.png`, `soru3.png` |
+| `outputs/*.csv` | Rapordaki bütün tablolar (karşılaştırmalar, ileri seçim, eşik politikaları, maliyet, derinlik eğrisi, değişken önemi, `skorlar.csv`) |
+| `outputs/sonuclar.json` | Rapordaki her sayının kaynağı, tek dosyada |
+| `outputs/calisma_log.txt` | Betiğin baştan sona çalışma çıktısı |
+| `outputs/islenmis_*.csv` | İşlenmiş eğitim ve test veri setleri |
+| `outputs/s2d_agac_kurallari.txt` | Karar ağacının tam kural listesi |
+
+`outputs/` klasörü hazır olarak eklenmiştir; betiği çalıştırmaya gerek kalmadan incelenebilir.
 
 ## Çalıştırma
 
@@ -23,7 +30,7 @@ pip install -r requirements.txt
 python ai4i_ariza_tahmini.py
 ```
 
-Betik yaklaşık 1 dakikada çalışır ve `outputs/` klasörünü üretir: rapordaki bütün tablolar (`.csv`), grafikler (`.png`), `sonuclar.json`, işlenmiş eğitim/test verisi ve tam çalışma logu. Bütün `random_state` değerleri 42 olduğu için skorlar birebir aynı çıkar.
+Betik yaklaşık 1 dakikada çalışır ve `outputs/` klasörünün tamamını yeniden üretir. Bütün `random_state` değerleri 42 olduğu için skorlar birebir aynı çıkar.
 
 ## Doğrulama düzeni
 

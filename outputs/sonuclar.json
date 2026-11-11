@@ -1,0 +1,1197 @@
+{
+ "1a": {
+  "saglam": 9661,
+  "ariza": 339,
+  "ariza_oran": 0.0339,
+  "dengesizlik": 28.49852507374631,
+  "dummy_acc": 0.9661,
+  "tip_oran": {
+   "L": 3.92,
+   "M": 2.77,
+   "H": 2.09
+  },
+  "tip_sayi": {
+   "L": 6000,
+   "M": 2997,
+   "H": 1003
+  }
+ },
+ "1b": [
+  {
+   "Degisken": "Torque [Nm]",
+   "Arizasiz ort": 39.6297,
+   "Arizali ort": 50.1681,
+   "Arizasiz medyan": 39.9,
+   "Arizali medyan": 53.7,
+   "Arizasiz std": 9.4721,
+   "Arizali std": 16.3745,
+   "Cohen d": 1.077,
+   "Mann-Whitney p": 0.0
+  },
+  {
+   "Degisken": "Tool wear [min]",
+   "Arizasiz ort": 106.6937,
+   "Arizali ort": 143.7817,
+   "Arizasiz medyan": 107.0,
+   "Arizali medyan": 165.0,
+   "Arizasiz std": 62.9458,
+   "Arizali std": 72.7599,
+   "Cohen d": 0.5859,
+   "Mann-Whitney p": 0.0
+  },
+  {
+   "Degisken": "Air temperature [K]",
+   "Arizasiz ort": 299.974,
+   "Arizali ort": 300.8864,
+   "Arizasiz medyan": 300.0,
+   "Arizali medyan": 301.6,
+   "Arizasiz std": 1.9907,
+   "Arizali std": 2.0715,
+   "Cohen d": 0.4577,
+   "Mann-Whitney p": 0.0
+  },
+  {
+   "Degisken": "Rotational speed [rpm]",
+   "Arizasiz ort": 1540.26,
+   "Arizali ort": 1496.4867,
+   "Arizasiz medyan": 1507.0,
+   "Arizali medyan": 1365.0,
+   "Arizasiz std": 167.3947,
+   "Arizali std": 384.9435,
+   "Cohen d": -0.2444,
+   "Mann-Whitney p": 0.0
+  },
+  {
+   "Degisken": "Process temperature [K]",
+   "Arizasiz ort": 309.9956,
+   "Arizali ort": 310.2903,
+   "Arizasiz medyan": 310.0,
+   "Arizali medyan": 310.4,
+   "Arizasiz std": 1.4868,
+   "Arizali std": 1.3637,
+   "Cohen d": 0.1987,
+   "Mann-Whitney p": 0.0001
+  }
+ ],
+ "1b_bant": {
+  "Tool wear [min]": [
+   {
+    "bant": "(-1, 100]",
+    "n": 4667,
+    "ariza_yuzde": 2.25
+   },
+   {
+    "bant": "(100, 200]",
+    "n": 4571,
+    "ariza_yuzde": 2.54
+   },
+   {
+    "bant": "(200, 260]",
+    "n": 762,
+    "ariza_yuzde": 15.49
+   }
+  ],
+  "Torque [Nm]": [
+   {
+    "bant": "(0, 30]",
+    "n": 1602,
+    "ariza_yuzde": 2.68
+   },
+   {
+    "bant": "(30, 50]",
+    "n": 6857,
+    "ariza_yuzde": 1.24
+   },
+   {
+    "bant": "(50, 60]",
+    "n": 1305,
+    "ariza_yuzde": 8.58
+   },
+   {
+    "bant": "(60, 80]",
+    "n": 236,
+    "ariza_yuzde": 41.95
+   }
+  ],
+  "Rotational speed [rpm]": [
+   {
+    "bant": "(0, 1380]",
+    "n": 1376,
+    "ariza_yuzde": 15.99
+   },
+   {
+    "bant": "(1380, 1600]",
+    "n": 5911,
+    "ariza_yuzde": 1.18
+   },
+   {
+    "bant": "(1600, 2000]",
+    "n": 2487,
+    "ariza_yuzde": 0.64
+   },
+   {
+    "bant": "(2000, 3000]",
+    "n": 226,
+    "ariza_yuzde": 14.6
+   }
+  ]
+ },
+ "1c": [
+  {
+   "Degisken": "Guc sapmasi kare",
+   "ROC-AUC": 0.7724,
+   "Yon": "bant disi=riskli",
+   "Turetilmis": true
+  },
+  {
+   "Degisken": "Torque [Nm]",
+   "ROC-AUC": 0.7702,
+   "Yon": "yuksek=riskli",
+   "Turetilmis": false
+  },
+  {
+   "Degisken": "Rotational speed [rpm]",
+   "ROC-AUC": 0.7667,
+   "Yon": "dusuk=riskli",
+   "Turetilmis": false
+  },
+  {
+   "Degisken": "Tork x Devir",
+   "ROC-AUC": 0.7457,
+   "Yon": "yuksek=riskli",
+   "Turetilmis": true
+  },
+  {
+   "Degisken": "Asinma x Tork",
+   "ROC-AUC": 0.7044,
+   "Yon": "yuksek=riskli",
+   "Turetilmis": true
+  },
+  {
+   "Degisken": "Sicaklik farki [K]",
+   "ROC-AUC": 0.6624,
+   "Yon": "dusuk=riskli",
+   "Turetilmis": true
+  },
+  {
+   "Degisken": "Tool wear [min]",
+   "ROC-AUC": 0.6621,
+   "Yon": "yuksek=riskli",
+   "Turetilmis": false
+  },
+  {
+   "Degisken": "Air temperature [K]",
+   "ROC-AUC": 0.6327,
+   "Yon": "yuksek=riskli",
+   "Turetilmis": false
+  },
+  {
+   "Degisken": "Process temperature [K]",
+   "ROC-AUC": 0.5637,
+   "Yon": "yuksek=riskli",
+   "Turetilmis": false
+  }
+ ],
+ "2a": {
+  "egitim": 8000,
+  "test": 2000,
+  "egitim_ariza": 271,
+  "test_ariza": 68,
+  "belirsiz_toplam": 9,
+  "belirsiz_egitim": 7,
+  "rastgele_toplam": 18,
+  "aykiri_egitim": 16,
+  "adimlar": {
+   "0) Ham (Type alfabetik kod)": {
+    "Logistic Regression": 0.4595925963049222,
+    "KNN": 0.4615347012873089,
+    "Decision Tree": 0.4703143875255692
+   },
+   "1) Type sirali kod L<M<H": {
+    "Logistic Regression": 0.4716008295225376,
+    "KNN": 0.46767359313478396,
+    "Decision Tree": 0.4623248304718698
+   },
+   "2) + devir log1p": {
+    "Logistic Regression": 0.4093541410788652,
+    "KNN": 0.49828930283576883,
+    "Decision Tree": 0.4638065284176238
+   },
+   "3) + belirsiz etiket egitimden atildi": {
+    "Logistic Regression": 0.4732363280103259,
+    "KNN": 0.4749564868218955,
+    "Decision Tree": 0.481833524024902
+   },
+   "4) + rastgele ariza (RNF) atildi": {
+    "Logistic Regression": 0.4732018271444674,
+    "KNN": 0.47391978516134065,
+    "Decision Tree": 0.481833524024902
+   },
+   "5) + ust binde-1 aykiri atildi": {
+    "Logistic Regression": 0.45969398650544785,
+    "KNN": 0.4714650938279272,
+    "Decision Tree": 0.4747998861199325
+   }
+  },
+  "karar": {
+   "2) + devir log1p": {
+    "kabul": false,
+    "kazanc": -0.010049760265644525,
+    "iyilesen_kat": 6
+   },
+   "3) + belirsiz etiket egitimden atildi": {
+    "kabul": true,
+    "kazanc": 0.009475695242644022,
+    "iyilesen_kat": 12
+   },
+   "4) + rastgele ariza (RNF) atildi": {
+    "kabul": false,
+    "kazanc": -0.00035706750880448723,
+    "iyilesen_kat": 4
+   },
+   "5) + ust binde-1 aykiri atildi": {
+    "kabul": false,
+    "kazanc": -0.008022457467938615,
+    "iyilesen_kat": 5
+   }
+  },
+  "log_kabul": false,
+  "maske_egitim": 7,
+  "paket_tekil": {
+   "P1 Isi (sicaklik farki)": {
+    "Logistic Regression": -0.0032824570108855866,
+    "KNN": 0.008221390841338827,
+    "Decision Tree": 0.01952532946120933
+   },
+   "P2 Guc [W]": {
+    "Logistic Regression": 0.02888529203752055,
+    "KNN": 0.027287464443645715,
+    "Decision Tree": 0.11234763406735226
+   },
+   "P3 Zorlanma (asinma x tork)": {
+    "Logistic Regression": -0.0020259515570546505,
+    "KNN": 0.03557564328798368,
+    "Decision Tree": 0.13843467029179524
+   },
+   "P4 Asinma orani": {
+    "Logistic Regression": 0.0003981039438428202,
+    "KNN": 0.019830932454002304,
+    "Decision Tree": -0.02348866063723437
+   },
+   "P5 Isi yuku + tork x devir": {
+    "Logistic Regression": 0.03326272193417201,
+    "KNN": 0.06370874445470331,
+    "Decision Tree": 0.04413153457487606
+   },
+   "P6 Guc bandi sapmasi (z^2)": {
+    "Logistic Regression": 0.023872993606144588,
+    "KNN": 0.07342767991462318,
+    "Decision Tree": 0.08127400156793851
+   }
+  },
+  "ileri_secim": [
+   {
+    "Adim": "Taban (temizlenmis)",
+    "Karar": "-",
+    "Logistic Regression": 0.4732363280103259,
+    "KNN": 0.4749564868218955,
+    "Decision Tree": 0.481833524024902
+   },
+   {
+    "Adim": "+ P6 Guc bandi sapmasi (z^2)",
+    "Karar": "KABUL",
+    "Logistic Regression": 0.4971093216164705,
+    "KNN": 0.5483841667365187,
+    "Decision Tree": 0.5631075255928405,
+    "Ort kazanc": 0.05952489169623537,
+    "Iyilesen kat": 14
+   },
+   {
+    "Adim": "+ P3 Zorlanma (asinma x tork)",
+    "Karar": "KABUL",
+    "Logistic Regression": 0.5041197290302668,
+    "KNN": 0.5457612787558933,
+    "Decision Tree": 0.6775641692902493,
+    "Ort kazanc": 0.03961472104352659,
+    "Iyilesen kat": 14
+   },
+   {
+    "Adim": "+ P2 Guc [W]",
+    "Karar": "KABUL",
+    "Logistic Regression": 0.530914837045037,
+    "KNN": 0.5445689391744452,
+    "Decision Tree": 0.6816111264950866,
+    "Ort kazanc": 0.009883241879386495,
+    "Iyilesen kat": 10
+   },
+   {
+    "Adim": "+ P5 Isi yuku + tork x devir",
+    "Karar": "ELENDI",
+    "Logistic Regression": 0.5384207792587394,
+    "KNN": 0.5895481915306133,
+    "Decision Tree": 0.6353711105241404,
+    "Ort kazanc": 0.0020817261996414205,
+    "Iyilesen kat": 8
+   },
+   {
+    "Adim": "+ P1 Isi (sicaklik farki)",
+    "Karar": "KABUL",
+    "Logistic Regression": 0.5296872407223878,
+    "KNN": 0.5934225980156439,
+    "Decision Tree": 0.7245946217070036,
+    "Ort kazanc": 0.030203185910155472,
+    "Iyilesen kat": 10
+   },
+   {
+    "Adim": "+ P4 Asinma orani",
+    "Karar": "ELENDI",
+    "Logistic Regression": 0.5296011239679967,
+    "KNN": 0.5903476721429153,
+    "Decision Tree": 0.720695430839734,
+    "Ort kazanc": -0.0023534111647964817,
+    "Iyilesen kat": 5
+   }
+  ],
+  "secili": [
+   "P6 Guc bandi sapmasi (z^2)",
+   "P3 Zorlanma (asinma x tork)",
+   "P2 Guc [W]",
+   "P1 Isi (sicaklik farki)"
+  ],
+  "sizinti_esik_cv": {
+   "Logistic Regression": 0.9271042829751985,
+   "KNN": 0.8666467970595573,
+   "Decision Tree": 0.7407011484651719
+  }
+ },
+ "2b": {
+  "skorlar": [
+   {
+    "Asama": "1 Temizlenmemis",
+    "Model": "Dummy",
+    "Accuracy": 0.966,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "F1": 0.0,
+    "PR-AUC": 0.034,
+    "ROC-AUC": 0.5,
+    "TP": 0,
+    "FP": 0,
+    "FN": 68,
+    "TN": 1932,
+    "CV PR-AUC ort": 0.0339,
+    "CV PR-AUC sapma": 0.0003
+   },
+   {
+    "Asama": "1 Temizlenmemis",
+    "Model": "Logistic Regression",
+    "Accuracy": 0.968,
+    "Precision": 0.6667,
+    "Recall": 0.1176,
+    "F1": 0.2,
+    "PR-AUC": 0.4345,
+    "ROC-AUC": 0.9005,
+    "TP": 8,
+    "FP": 4,
+    "FN": 60,
+    "TN": 1928,
+    "CV PR-AUC ort": 0.4596,
+    "CV PR-AUC sapma": 0.0757
+   },
+   {
+    "Asama": "1 Temizlenmemis",
+    "Model": "KNN",
+    "Accuracy": 0.974,
+    "Precision": 0.8333,
+    "Recall": 0.2941,
+    "F1": 0.4348,
+    "PR-AUC": 0.4692,
+    "ROC-AUC": 0.8366,
+    "TP": 20,
+    "FP": 4,
+    "FN": 48,
+    "TN": 1928,
+    "CV PR-AUC ort": 0.4615,
+    "CV PR-AUC sapma": 0.0385
+   },
+   {
+    "Asama": "1 Temizlenmemis",
+    "Model": "Decision Tree",
+    "Accuracy": 0.979,
+    "Precision": 0.6711,
+    "Recall": 0.75,
+    "F1": 0.7083,
+    "PR-AUC": 0.5118,
+    "ROC-AUC": 0.8685,
+    "TP": 51,
+    "FP": 25,
+    "FN": 17,
+    "TN": 1907,
+    "CV PR-AUC ort": 0.4703,
+    "CV PR-AUC sapma": 0.0336
+   },
+   {
+    "Asama": "2 Temizlenmis",
+    "Model": "Dummy",
+    "Accuracy": 0.966,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "F1": 0.0,
+    "PR-AUC": 0.034,
+    "ROC-AUC": 0.5,
+    "TP": 0,
+    "FP": 0,
+    "FN": 68,
+    "TN": 1932,
+    "CV PR-AUC ort": 0.0339,
+    "CV PR-AUC sapma": 0.0003
+   },
+   {
+    "Asama": "2 Temizlenmis",
+    "Model": "Logistic Regression",
+    "Accuracy": 0.967,
+    "Precision": 0.5833,
+    "Recall": 0.1029,
+    "F1": 0.175,
+    "PR-AUC": 0.4213,
+    "ROC-AUC": 0.9,
+    "TP": 7,
+    "FP": 5,
+    "FN": 61,
+    "TN": 1927,
+    "CV PR-AUC ort": 0.4732,
+    "CV PR-AUC sapma": 0.0708
+   },
+   {
+    "Asama": "2 Temizlenmis",
+    "Model": "KNN",
+    "Accuracy": 0.9745,
+    "Precision": 0.84,
+    "Recall": 0.3088,
+    "F1": 0.4516,
+    "PR-AUC": 0.4689,
+    "ROC-AUC": 0.8308,
+    "TP": 21,
+    "FP": 4,
+    "FN": 47,
+    "TN": 1928,
+    "CV PR-AUC ort": 0.475,
+    "CV PR-AUC sapma": 0.0409
+   },
+   {
+    "Asama": "2 Temizlenmis",
+    "Model": "Decision Tree",
+    "Accuracy": 0.978,
+    "Precision": 0.6818,
+    "Recall": 0.6618,
+    "F1": 0.6716,
+    "PR-AUC": 0.4627,
+    "ROC-AUC": 0.8254,
+    "TP": 45,
+    "FP": 21,
+    "FN": 23,
+    "TN": 1911,
+    "CV PR-AUC ort": 0.4818,
+    "CV PR-AUC sapma": 0.0436
+   },
+   {
+    "Asama": "3 Ozellikli",
+    "Model": "Dummy",
+    "Accuracy": 0.966,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "F1": 0.0,
+    "PR-AUC": 0.034,
+    "ROC-AUC": 0.5,
+    "TP": 0,
+    "FP": 0,
+    "FN": 68,
+    "TN": 1932,
+    "CV PR-AUC ort": 0.0339,
+    "CV PR-AUC sapma": 0.0003
+   },
+   {
+    "Asama": "3 Ozellikli",
+    "Model": "Logistic Regression",
+    "Accuracy": 0.9695,
+    "Precision": 0.64,
+    "Recall": 0.2353,
+    "F1": 0.3441,
+    "PR-AUC": 0.5007,
+    "ROC-AUC": 0.9401,
+    "TP": 16,
+    "FP": 9,
+    "FN": 52,
+    "TN": 1923,
+    "CV PR-AUC ort": 0.5297,
+    "CV PR-AUC sapma": 0.0594
+   },
+   {
+    "Asama": "3 Ozellikli",
+    "Model": "KNN",
+    "Accuracy": 0.9745,
+    "Precision": 0.7931,
+    "Recall": 0.3382,
+    "F1": 0.4742,
+    "PR-AUC": 0.5368,
+    "ROC-AUC": 0.883,
+    "TP": 23,
+    "FP": 6,
+    "FN": 45,
+    "TN": 1926,
+    "CV PR-AUC ort": 0.5934,
+    "CV PR-AUC sapma": 0.044
+   },
+   {
+    "Asama": "3 Ozellikli",
+    "Model": "Decision Tree",
+    "Accuracy": 0.9845,
+    "Precision": 0.7606,
+    "Recall": 0.7941,
+    "F1": 0.777,
+    "PR-AUC": 0.611,
+    "ROC-AUC": 0.8927,
+    "TP": 54,
+    "FP": 17,
+    "FN": 14,
+    "TN": 1915,
+    "CV PR-AUC ort": 0.7246,
+    "CV PR-AUC sapma": 0.0414
+   },
+   {
+    "Asama": "4 Ozellikli + ayarli",
+    "Model": "Dummy",
+    "Accuracy": 0.966,
+    "Precision": 0.0,
+    "Recall": 0.0,
+    "F1": 0.0,
+    "PR-AUC": 0.034,
+    "ROC-AUC": 0.5,
+    "TP": 0,
+    "FP": 0,
+    "FN": 68,
+    "TN": 1932,
+    "CV PR-AUC ort": 0.0339,
+    "CV PR-AUC sapma": 0.0003
+   },
+   {
+    "Asama": "4 Ozellikli + ayarli",
+    "Model": "Logistic Regression",
+    "Accuracy": 0.9695,
+    "Precision": 0.64,
+    "Recall": 0.2353,
+    "F1": 0.3441,
+    "PR-AUC": 0.5007,
+    "ROC-AUC": 0.9401,
+    "TP": 16,
+    "FP": 9,
+    "FN": 52,
+    "TN": 1923,
+    "CV PR-AUC ort": 0.5297,
+    "CV PR-AUC sapma": 0.0594
+   },
+   {
+    "Asama": "4 Ozellikli + ayarli",
+    "Model": "KNN",
+    "Accuracy": 0.9715,
+    "Precision": 1.0,
+    "Recall": 0.1618,
+    "F1": 0.2785,
+    "PR-AUC": 0.6067,
+    "ROC-AUC": 0.933,
+    "TP": 11,
+    "FP": 0,
+    "FN": 57,
+    "TN": 1932,
+    "CV PR-AUC ort": 0.6829,
+    "CV PR-AUC sapma": 0.0464
+   },
+   {
+    "Asama": "4 Ozellikli + ayarli",
+    "Model": "Decision Tree",
+    "Accuracy": 0.9895,
+    "Precision": 0.9608,
+    "Recall": 0.7206,
+    "F1": 0.8235,
+    "PR-AUC": 0.8482,
+    "ROC-AUC": 0.9437,
+    "TP": 49,
+    "FP": 2,
+    "FN": 19,
+    "TN": 1930,
+    "CV PR-AUC ort": 0.883,
+    "CV PR-AUC sapma": 0.0328
+   }
+  ],
+  "ayar": {
+   "Logistic Regression": {
+    "C": 1
+   },
+   "KNN": {
+    "n_neighbors": 25
+   },
+   "Decision Tree": {
+    "max_depth": 7,
+    "min_samples_leaf": 10
+   }
+  }
+ },
+ "nested": {
+  "Logistic Regression": {
+   "ort": 0.5259827626670176,
+   "sapma": 0.05609515840771529,
+   "duz_cv": 0.5296872407223878,
+   "secilenler": [
+    "{'C': 1}",
+    "{'C': 1}",
+    "{'C': 10}",
+    "{'C': 10}",
+    "{'C': 1}"
+   ]
+  },
+  "KNN": {
+   "ort": 0.6858099352075879,
+   "sapma": 0.061496344330824196,
+   "duz_cv": 0.6828698050590194,
+   "secilenler": [
+    "{'n_neighbors': 25}",
+    "{'n_neighbors': 25}",
+    "{'n_neighbors': 25}",
+    "{'n_neighbors': 15}",
+    "{'n_neighbors': 35}"
+   ]
+  },
+  "Decision Tree": {
+   "ort": 0.8907157931558217,
+   "sapma": 0.03965743680702228,
+   "duz_cv": 0.8829971998387525,
+   "secilenler": [
+    "{'max_depth': 6, 'min_samples_leaf': 10}",
+    "{'max_depth': 5, 'min_samples_leaf': 5}",
+    "{'max_depth': 6, 'min_samples_leaf': 10}",
+    "{'max_depth': 7, 'min_samples_leaf': 10}",
+    "{'max_depth': 5, 'min_samples_leaf': 5}"
+   ]
+  }
+ },
+ "2c": {
+  "Accuracy": {
+   "Decision Tree": 0.9895,
+   "KNN": 0.9715,
+   "Logistic Regression": 0.9695,
+   "Dummy": 0.966
+  },
+  "Precision": {
+   "KNN": 1.0,
+   "Decision Tree": 0.9608,
+   "Logistic Regression": 0.64,
+   "Dummy": 0.0
+  },
+  "Recall": {
+   "Decision Tree": 0.7206,
+   "Logistic Regression": 0.2353,
+   "KNN": 0.1618,
+   "Dummy": 0.0
+  },
+  "F1": {
+   "Decision Tree": 0.8235,
+   "Logistic Regression": 0.3441,
+   "KNN": 0.2785,
+   "Dummy": 0.0
+  },
+  "PR-AUC": {
+   "Decision Tree": 0.8482,
+   "KNN": 0.6067,
+   "Logistic Regression": 0.5007,
+   "Dummy": 0.034
+  }
+ },
+ "2d": {
+  "yaprak": 18,
+  "derinlik": 7,
+  "kurallar_3": "|--- Guc sapmasi kare <= 6.6\n|   |--- Asinma x Tork <= 10998.5\n|   |   |--- Sicaklik farki [K] <= 8.7\n|   |   |   |--- Rotational speed [rpm] <= 1380.5\n|   |   |   |   |--- truncated branch of depth 2\n|   |   |   |--- Rotational speed [rpm] >  1380.5\n|   |   |   |   |--- truncated branch of depth 3\n|   |   |--- Sicaklik farki [K] >  8.7\n|   |   |   |--- Tool wear [min] <= 202.5\n|   |   |   |   |--- truncated branch of depth 2\n|   |   |   |--- Tool wear [min] >  202.5\n|   |   |   |   |--- truncated branch of depth 4\n|   |--- Asinma x Tork >  10998.5\n|   |   |--- Type <= 0.5\n|   |   |   |--- class: 1\n|   |   |--- Type >  0.5\n|   |   |   |--- Asinma x Tork <= 11719.8\n|   |   |   |   |--- class: 0\n|   |   |   |--- Asinma x Tork >  11719.8\n|   |   |   |   |--- class: 0\n|--- Guc sapmasi kare >  6.6\n|   |--- class: 1\n",
+  "onem": [
+   {
+    "Degisken": "Guc sapmasi kare",
+    "Permutasyon onemi": NaN,
+    "Gini onemi": 0.3322,
+    "Turetilmis": true
+   },
+   {
+    "Degisken": "Rotational speed [rpm]",
+    "Permutasyon onemi": 0.7238,
+    "Gini onemi": 0.2716,
+    "Turetilmis": false
+   },
+   {
+    "Degisken": "Asinma x Tork",
+    "Permutasyon onemi": 0.3463,
+    "Gini onemi": 0.2477,
+    "Turetilmis": true
+   },
+   {
+    "Degisken": "Sicaklik farki [K]",
+    "Permutasyon onemi": 0.5093,
+    "Gini onemi": 0.0641,
+    "Turetilmis": true
+   },
+   {
+    "Degisken": "Type",
+    "Permutasyon onemi": 0.0531,
+    "Gini onemi": 0.0534,
+    "Turetilmis": false
+   },
+   {
+    "Degisken": "Tool wear [min]",
+    "Permutasyon onemi": 0.031,
+    "Gini onemi": 0.0172,
+    "Turetilmis": false
+   },
+   {
+    "Degisken": "Guc [W]",
+    "Permutasyon onemi": 0.0019,
+    "Gini onemi": 0.0083,
+    "Turetilmis": true
+   },
+   {
+    "Degisken": "Torque [Nm]",
+    "Permutasyon onemi": 0.6862,
+    "Gini onemi": 0.005,
+    "Turetilmis": false
+   },
+   {
+    "Degisken": "Air temperature [K]",
+    "Permutasyon onemi": -0.003,
+    "Gini onemi": 0.0004,
+    "Turetilmis": false
+   },
+   {
+    "Degisken": "Process temperature [K]",
+    "Permutasyon onemi": 0.0,
+    "Gini onemi": 0.0,
+    "Turetilmis": false
+   }
+  ],
+  "turetilmis_gini_pay": 0.6523277277045548
+ },
+ "3a": {
+  "maliyet": [
+   {
+    "Oran (1 FN = k FP)": 1,
+    "Esik": 0.6667,
+    "OOF Recall": 0.7823,
+    "OOF FP": 2,
+    "Test TP": 49,
+    "Test FP": 0,
+    "Test FN": 19,
+    "Test Recall": 0.7206,
+    "Test Precision": 1.0,
+    "Test maliyet": 19
+   },
+   {
+    "Oran (1 FN = k FP)": 5,
+    "Esik": 0.4375,
+    "OOF Recall": 0.8081,
+    "OOF FP": 20,
+    "Test TP": 53,
+    "Test FP": 5,
+    "Test FN": 15,
+    "Test Recall": 0.7794,
+    "Test Precision": 0.9138,
+    "Test maliyet": 80
+   },
+   {
+    "Oran (1 FN = k FP)": 10,
+    "Esik": 0.1045,
+    "OOF Recall": 0.8413,
+    "OOF FP": 104,
+    "Test TP": 57,
+    "Test FP": 17,
+    "Test FN": 11,
+    "Test Recall": 0.8382,
+    "Test Precision": 0.7703,
+    "Test maliyet": 127
+   },
+   {
+    "Oran (1 FN = k FP)": 20,
+    "Esik": 0.0145,
+    "OOF Recall": 0.9446,
+    "OOF FP": 394,
+    "Test TP": 61,
+    "Test FP": 97,
+    "Test FN": 7,
+    "Test Recall": 0.8971,
+    "Test Precision": 0.3861,
+    "Test maliyet": 237
+   },
+   {
+    "Oran (1 FN = k FP)": 50,
+    "Esik": 0.0145,
+    "OOF Recall": 0.9446,
+    "OOF FP": 394,
+    "Test TP": 61,
+    "Test FP": 97,
+    "Test FN": 7,
+    "Test Recall": 0.8971,
+    "Test Precision": 0.3861,
+    "Test maliyet": 447
+   }
+  ],
+  "nihai": {
+   "esik": 0.1045,
+   "TP": 57,
+   "FP": 17,
+   "FN": 11,
+   "TN": 1915,
+   "Recall": 0.8382352941176471,
+   "Precision": 0.7702702702702703,
+   "F1": 0.8028169014084507,
+   "Accuracy": 0.986,
+   "PR-AUC": 0.8482108046592036,
+   "ROC-AUC": 0.9436959566435269,
+   "kat_recall": [
+    0.8333333333333334,
+    0.9074074074074074,
+    0.8333333333333334,
+    0.8518518518518519,
+    0.7818181818181819
+   ]
+  },
+  "politika": [
+   {
+    "Politika": "Ariza kacirma (recall>=0,80)",
+    "Model": "Logistic Regression",
+    "Esik": 0.0365,
+    "TP": 57,
+    "FP": 229,
+    "FN": 11,
+    "TN": 1703,
+    "Recall": 0.8382,
+    "Precision": 0.1993
+   },
+   {
+    "Politika": "Yanlis alarm sinirla (FPR<=0,10)",
+    "Model": "Logistic Regression",
+    "Esik": 0.0473,
+    "TP": 57,
+    "FP": 170,
+    "FN": 11,
+    "TN": 1762,
+    "Recall": 0.8382,
+    "Precision": 0.2511
+   },
+   {
+    "Politika": "En yuksek F1",
+    "Model": "Logistic Regression",
+    "Esik": 0.2474,
+    "TP": 29,
+    "FP": 26,
+    "FN": 39,
+    "TN": 1906,
+    "Recall": 0.4265,
+    "Precision": 0.5273
+   },
+   {
+    "Politika": "Ariza kacirma (recall>=0,80)",
+    "Model": "KNN",
+    "Esik": 0.12,
+    "TP": 53,
+    "FP": 80,
+    "FN": 15,
+    "TN": 1852,
+    "Recall": 0.7794,
+    "Precision": 0.3985
+   },
+   {
+    "Politika": "Yanlis alarm sinirla (FPR<=0,10)",
+    "Model": "KNN",
+    "Esik": 0.08,
+    "TP": 58,
+    "FP": 138,
+    "FN": 10,
+    "TN": 1794,
+    "Recall": 0.8529,
+    "Precision": 0.2959
+   },
+   {
+    "Politika": "En yuksek F1",
+    "Model": "KNN",
+    "Esik": 0.28,
+    "TP": 34,
+    "FP": 21,
+    "FN": 34,
+    "TN": 1911,
+    "Recall": 0.5,
+    "Precision": 0.6182
+   },
+   {
+    "Politika": "Ariza kacirma (recall>=0,80)",
+    "Model": "Decision Tree",
+    "Esik": 0.4375,
+    "TP": 53,
+    "FP": 5,
+    "FN": 15,
+    "TN": 1927,
+    "Recall": 0.7794,
+    "Precision": 0.9138
+   },
+   {
+    "Politika": "Yanlis alarm sinirla (FPR<=0,10)",
+    "Model": "Decision Tree",
+    "Esik": 0.0145,
+    "TP": 61,
+    "FP": 97,
+    "FN": 7,
+    "TN": 1835,
+    "Recall": 0.8971,
+    "Precision": 0.3861
+   },
+   {
+    "Politika": "En yuksek F1",
+    "Model": "Decision Tree",
+    "Esik": 0.6,
+    "TP": 49,
+    "FP": 0,
+    "FN": 19,
+    "TN": 1932,
+    "Recall": 0.7206,
+    "Precision": 1.0
+   }
+  ],
+  "oran": 10
+ },
+ "bootstrap": {
+  "Recall": [
+   0.7464609692050609,
+   0.9210731907894736
+  ],
+  "Precision": [
+   0.6716364605543711,
+   0.8676591790562378
+  ],
+  "PR-AUC": [
+   0.7629458477754729,
+   0.9196027159790555
+  ],
+  "PR-AUC farki (DT-KNN)": [
+   0.14526832496283937,
+   0.34178735222285905
+  ]
+ },
+ "3b": {
+  "denemeler": [
+   {
+    "Deneme": "A) Ayarli agac, esik 0,50",
+    "CV PR-AUC": 0.883,
+    "OOF Recall": 0.797,
+    "OOF Precision": 0.9558,
+    "Test Recall": 0.7206,
+    "Test FP": 2,
+    "Test FN": 19
+   },
+   {
+    "Deneme": "B) A + esik 0.1045 (maliyet 1:10)",
+    "CV PR-AUC": 0.883,
+    "OOF Recall": 0.8413,
+    "OOF Precision": 0.6867,
+    "Test Recall": 0.8382,
+    "Test FP": 17,
+    "Test FN": 11
+   },
+   {
+    "Deneme": "C) A + class_weight=balanced",
+    "CV PR-AUC": 0.8354,
+    "OOF Recall": 0.9004,
+    "OOF Precision": 0.4026,
+    "Test Recall": 0.8971,
+    "Test FP": 96,
+    "Test FN": 7
+   },
+   {
+    "Deneme": "D) A + esik 0.0145 (maliyet 1:20)",
+    "CV PR-AUC": 0.883,
+    "OOF Recall": 0.9446,
+    "OOF Precision": 0.3938,
+    "Test Recall": 0.8971,
+    "Test FP": 97,
+    "Test FN": 7
+   }
+  ],
+  "tur": {
+   "TWF": {
+    "Toplam": 10.0,
+    "Kacirilan": 8.0,
+    "Yakalama %": 20.0
+   },
+   "HDF": {
+    "Toplam": 29.0,
+    "Kacirilan": 1.0,
+    "Yakalama %": 96.6
+   },
+   "PWF": {
+    "Toplam": 13.0,
+    "Kacirilan": 0.0,
+    "Yakalama %": 100.0
+   },
+   "OSF": {
+    "Toplam": 16.0,
+    "Kacirilan": 0.0,
+    "Yakalama %": 100.0
+   },
+   "RNF": {
+    "Toplam": 0.0,
+    "Kacirilan": 0.0,
+    "Yakalama %": null
+   }
+  }
+ },
+ "3c": {
+  "egitim_test": [
+   {
+    "Model": "Logistic Regression",
+    "Surum": "varsayilan",
+    "Egitim PR-AUC": 0.5461,
+    "Test PR-AUC": 0.5007,
+    "Fark": 0.0454
+   },
+   {
+    "Model": "Logistic Regression",
+    "Surum": "ayarli",
+    "Egitim PR-AUC": 0.5461,
+    "Test PR-AUC": 0.5007,
+    "Fark": 0.0454
+   },
+   {
+    "Model": "KNN",
+    "Surum": "varsayilan",
+    "Egitim PR-AUC": 0.8127,
+    "Test PR-AUC": 0.5368,
+    "Fark": 0.2759
+   },
+   {
+    "Model": "KNN",
+    "Surum": "ayarli",
+    "Egitim PR-AUC": 0.7628,
+    "Test PR-AUC": 0.6067,
+    "Fark": 0.1561
+   },
+   {
+    "Model": "Decision Tree",
+    "Surum": "varsayilan",
+    "Egitim PR-AUC": 1.0,
+    "Test PR-AUC": 0.611,
+    "Fark": 0.389
+   },
+   {
+    "Model": "Decision Tree",
+    "Surum": "ayarli",
+    "Egitim PR-AUC": 0.9511,
+    "Test PR-AUC": 0.8482,
+    "Fark": 0.1029
+   }
+  ],
+  "derinlik": [
+   {
+    "max_depth": 2,
+    "Egitim PR-AUC": 0.5445,
+    "CV PR-AUC": 0.5246,
+    "CV sapma": 0.0801,
+    "Yaprak": 3
+   },
+   {
+    "max_depth": 3,
+    "Egitim PR-AUC": 0.6558,
+    "CV PR-AUC": 0.632,
+    "CV sapma": 0.0711,
+    "Yaprak": 5
+   },
+   {
+    "max_depth": 4,
+    "Egitim PR-AUC": 0.8683,
+    "CV PR-AUC": 0.8253,
+    "CV sapma": 0.0611,
+    "Yaprak": 8
+   },
+   {
+    "max_depth": 5,
+    "Egitim PR-AUC": 0.9245,
+    "CV PR-AUC": 0.8687,
+    "CV sapma": 0.0376,
+    "Yaprak": 11
+   },
+   {
+    "max_depth": 6,
+    "Egitim PR-AUC": 0.9344,
+    "CV PR-AUC": 0.8707,
+    "CV sapma": 0.0317,
+    "Yaprak": 14
+   },
+   {
+    "max_depth": 7,
+    "Egitim PR-AUC": 0.9466,
+    "CV PR-AUC": 0.8461,
+    "CV sapma": 0.0262,
+    "Yaprak": 17
+   },
+   {
+    "max_depth": 8,
+    "Egitim PR-AUC": 0.9551,
+    "CV PR-AUC": 0.8325,
+    "CV sapma": 0.0279,
+    "Yaprak": 23
+   },
+   {
+    "max_depth": 10,
+    "Egitim PR-AUC": 0.9715,
+    "CV PR-AUC": 0.7918,
+    "CV sapma": 0.0478,
+    "Yaprak": 30
+   },
+   {
+    "max_depth": 12,
+    "Egitim PR-AUC": 0.9797,
+    "CV PR-AUC": 0.7754,
+    "CV sapma": 0.033,
+    "Yaprak": 38
+   },
+   {
+    "max_depth": 15,
+    "Egitim PR-AUC": 0.9965,
+    "CV PR-AUC": 0.7489,
+    "CV sapma": 0.0439,
+    "Yaprak": 50
+   },
+   {
+    "max_depth": 20,
+    "Egitim PR-AUC": 1.0,
+    "CV PR-AUC": 0.7246,
+    "CV sapma": 0.0414,
+    "Yaprak": 61
+   },
+   {
+    "max_depth": "sinirsiz",
+    "Egitim PR-AUC": 1.0,
+    "CV PR-AUC": 0.7246,
+    "CV sapma": 0.0414,
+    "Yaprak": 61
+   }
+  ]
+ },
+ "sizinti": {
+  "Yasak sutunlar (TWF/HDF/PWF/OSF/RNF) girdide yok": true,
+  "UDI / Product ID girdide yok": true,
+  "Egitim ve test kesisimi bos": true,
+  "Her UDI tek satir (grup sizintisi yok)": true,
+  "Test kumesi butun asamalarda ayni (2000 satir, hic satir atilmadi)": true,
+  "Nihai egitim satirlari test ile kesismiyor": true,
+  "En guclu tekli degisken ROC-AUC < 0,80": true
+ },
+ "surumler": {
+  "python": "3.13.18",
+  "pandas": "3.0.5",
+  "numpy": "2.5.3",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.2"
+ }
+}

@@ -1,0 +1,7 @@
+Model,Surum,Egitim PR-AUC,Test PR-AUC,Fark
+Logistic Regression,varsayilan,0.5461,0.5007,0.0454
+Logistic Regression,ayarli,0.5461,0.5007,0.0454
+KNN,varsayilan,0.8127,0.5368,0.2759
+KNN,ayarli,0.7628,0.6067,0.1561
+Decision Tree,varsayilan,1.0,0.611,0.389
+Decision Tree,ayarli,0.9511,0.8482,0.1029

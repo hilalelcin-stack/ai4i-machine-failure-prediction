@@ -1,0 +1,6 @@
+Degisken,Arizasiz ort,Arizali ort,Arizasiz medyan,Arizali medyan,Arizasiz std,Arizali std,Cohen d,Mann-Whitney p
+Torque [Nm],39.6297,50.1681,39.9,53.7,9.4721,16.3745,1.077,0.0
+Tool wear [min],106.6937,143.7817,107.0,165.0,62.9458,72.7599,0.5859,0.0
+Air temperature [K],299.974,300.8864,300.0,301.6,1.9907,2.0715,0.4577,0.0
+Rotational speed [rpm],1540.26,1496.4867,1507.0,1365.0,167.3947,384.9435,-0.2444,0.0
+Process temperature [K],309.9956,310.2903,310.0,310.4,1.4868,1.3637,0.1987,0.0001

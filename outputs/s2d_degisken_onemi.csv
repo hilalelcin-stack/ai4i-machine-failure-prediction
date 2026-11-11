@@ -1,0 +1,11 @@
+Degisken,Permutasyon onemi,Gini onemi,Turetilmis
+Guc sapmasi kare,,0.3322,True
+Rotational speed [rpm],0.7238,0.2716,False
+Asinma x Tork,0.3463,0.2477,True
+Sicaklik farki [K],0.5093,0.0641,True
+Type,0.0531,0.0534,False
+Tool wear [min],0.031,0.0172,False
+Guc [W],0.0019,0.0083,True
+Torque [Nm],0.6862,0.005,False
+Air temperature [K],-0.003,0.0004,False
+Process temperature [K],0.0,0.0,False

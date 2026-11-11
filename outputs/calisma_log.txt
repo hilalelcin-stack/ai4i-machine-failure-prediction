@@ -1,0 +1,245 @@
+Veri (10000, 14) | gelistirme 8000 (ariza 271) | test 2000 (ariza 68)
+
+==============================================================================
+SORU 1a - Machine failure dagilimi
+==============================================================================
+Machine failure
+0    9661
+1     339
+Ariza orani %3.39 | dengesizlik 1:28.5 | herkese 'saglam' diyen kuralin accuracy'si 0.9661
+Urun tipine gore ariza orani (%): {'L': 3.92, 'M': 2.77, 'H': 2.09}
+
+==============================================================================
+SORU 1b - Arizali vs arizasiz karsilastirma
+==============================================================================
+               Degisken  Arizasiz ort  Arizali ort  Arizasiz medyan  Arizali medyan  Arizasiz std  Arizali std  Cohen d  Mann-Whitney p
+            Torque [Nm]        39.630       50.168             39.9            53.7         9.472       16.374    1.077             0.0
+        Tool wear [min]       106.694      143.782            107.0           165.0        62.946       72.760    0.586             0.0
+    Air temperature [K]       299.974      300.886            300.0           301.6         1.991        2.071    0.458             0.0
+ Rotational speed [rpm]      1540.260     1496.487           1507.0          1365.0       167.395      384.944   -0.244             0.0
+Process temperature [K]       309.996      310.290            310.0           310.4         1.487        1.364    0.199             0.0
+
+Tool wear [min] bandina gore ariza orani (%):
+                 kayit  ariza %
+Tool wear [min]                
+(-1, 100]         4667     2.25
+(100, 200]        4571     2.54
+(200, 260]         762    15.49
+
+Torque [Nm] bandina gore ariza orani (%):
+             kayit  ariza %
+Torque [Nm]                
+(0, 30]       1602     2.68
+(30, 50]      6857     1.24
+(50, 60]      1305     8.58
+(60, 80]       236    41.95
+
+Rotational speed [rpm] bandina gore ariza orani (%):
+                        kayit  ariza %
+Rotational speed [rpm]                
+(0, 1380]                1376    15.99
+(1380, 1600]             5911     1.18
+(1600, 2000]             2487     0.64
+(2000, 3000]              226    14.60
+
+==============================================================================
+SORU 1c - Tek degiskenli ayirt edicilik (ROC-AUC)
+==============================================================================
+               Degisken  ROC-AUC              Yon  Turetilmis
+       Guc sapmasi kare   0.7724 bant disi=riskli        True
+            Torque [Nm]   0.7702    yuksek=riskli       False
+ Rotational speed [rpm]   0.7667     dusuk=riskli       False
+           Tork x Devir   0.7457    yuksek=riskli        True
+          Asinma x Tork   0.7044    yuksek=riskli        True
+     Sicaklik farki [K]   0.6624     dusuk=riskli        True
+        Tool wear [min]   0.6621    yuksek=riskli       False
+    Air temperature [K]   0.6327    yuksek=riskli       False
+Process temperature [K]   0.5637    yuksek=riskli       False
+
+==============================================================================
+SORU 2a - Temizlik adimlarinin CV katkisi (dogrulama katlari eksiksiz)
+==============================================================================
+0) Ham (Type alfabetik kod)             Logistic 0.4596 | KNN 0.4615 | Decision 0.4703 || ort 0.4638
+1) Type sirali kod L<M<H                Logistic 0.4716 | KNN 0.4677 | Decision 0.4623 || ort 0.4672
+2) + devir log1p                        Logistic 0.4094 | KNN 0.4983 | Decision 0.4638 || ort 0.4571
+3) + belirsiz etiket egitimden atildi   Logistic 0.4732 | KNN 0.4750 | Decision 0.4818 || ort 0.4767
+4) + rastgele ariza (RNF) atildi        Logistic 0.4732 | KNN 0.4739 | Decision 0.4818 || ort 0.4763
+5) + ust binde-1 aykiri atildi          Logistic 0.4597 | KNN 0.4715 | Decision 0.4748 || ort 0.4687
+  2) + devir log1p                         kazanc -0.0100, iyilesen kat 6/15 -> ELENDI
+  3) + belirsiz etiket egitimden atildi    kazanc +0.0095, iyilesen kat 12/15 -> KABUL
+  4) + rastgele ariza (RNF) atildi         kazanc -0.0004, iyilesen kat 4/15 -> ELENDI
+  5) + ust binde-1 aykiri atildi           kazanc -0.0080, iyilesen kat 5/15 -> ELENDI
+Egitimden atilan satir: 7 | nihai egitim 7993 | test 2000
+
+==============================================================================
+SORU 2a - Oznitelik paketleri ve ileri secim
+==============================================================================
+P1 Isi (sicaklik farki)       Logistic -0.0033 | KNN +0.0082 | Decision +0.0195 || ort +0.0082, kat 5/15
+P2 Guc [W]                    Logistic +0.0289 | KNN +0.0273 | Decision +0.1123 || ort +0.0562, kat 14/15
+P3 Zorlanma (asinma x tork)   Logistic -0.0020 | KNN +0.0356 | Decision +0.1384 || ort +0.0573, kat 12/15
+P4 Asinma orani               Logistic +0.0004 | KNN +0.0198 | Decision -0.0235 || ort -0.0011, kat 8/15
+P5 Isi yuku + tork x devir    Logistic +0.0333 | KNN +0.0637 | Decision +0.0441 || ort +0.0470, kat 12/15
+P6 Guc bandi sapmasi (z^2)    Logistic +0.0239 | KNN +0.0734 | Decision +0.0813 || ort +0.0595, kat 14/15
++ P6 Guc bandi sapmasi (z^2)   ort kazanc +0.0595, kat 14/15 -> KABUL
++ P3 Zorlanma (asinma x tork)  ort kazanc +0.0396, kat 14/15 -> KABUL
++ P2 Guc [W]                   ort kazanc +0.0099, kat 10/15 -> KABUL
++ P5 Isi yuku + tork x devir   ort kazanc +0.0021, kat 8/15 -> ELENDI
++ P1 Isi (sicaklik farki)      ort kazanc +0.0302, kat 10/15 -> KABUL
++ P4 Asinma orani              ort kazanc -0.0024, kat 5/15 -> ELENDI
+Secilen paketler: ['P6 Guc bandi sapmasi (z^2)', 'P3 Zorlanma (asinma x tork)', 'P2 Guc [W]', 'P1 Isi (sicaklik farki)']
+Kesin esik bayraklariyla CV (ELENDI - sizinti): {'Logistic Regression': 0.9271, 'KNN': 0.8666, 'Decision Tree': 0.7407}
+
+==============================================================================
+SORU 2b - Asama x model skor tablosu (test esigi 0,50)
+==============================================================================
+  Logistic Regression  en iyi {'C': 1} CV PR-AUC 0.5297 +- 0.0594
+  KNN                  en iyi {'n_neighbors': 25} CV PR-AUC 0.6829 +- 0.0464
+  Decision Tree        en iyi {'max_depth': 7, 'min_samples_leaf': 10} CV PR-AUC 0.8830 +- 0.0328
+               Asama               Model  Accuracy  Precision  Recall     F1  PR-AUC  ROC-AUC  CV PR-AUC ort  CV PR-AUC sapma
+     1 Temizlenmemis               Dummy    0.9660     0.0000  0.0000 0.0000  0.0340   0.5000         0.0339           0.0003
+     1 Temizlenmemis Logistic Regression    0.9680     0.6667  0.1176 0.2000  0.4345   0.9005         0.4596           0.0757
+     1 Temizlenmemis                 KNN    0.9740     0.8333  0.2941 0.4348  0.4692   0.8366         0.4615           0.0385
+     1 Temizlenmemis       Decision Tree    0.9790     0.6711  0.7500 0.7083  0.5118   0.8685         0.4703           0.0336
+       2 Temizlenmis               Dummy    0.9660     0.0000  0.0000 0.0000  0.0340   0.5000         0.0339           0.0003
+       2 Temizlenmis Logistic Regression    0.9670     0.5833  0.1029 0.1750  0.4213   0.9000         0.4732           0.0708
+       2 Temizlenmis                 KNN    0.9745     0.8400  0.3088 0.4516  0.4689   0.8308         0.4750           0.0409
+       2 Temizlenmis       Decision Tree    0.9780     0.6818  0.6618 0.6716  0.4627   0.8254         0.4818           0.0436
+         3 Ozellikli               Dummy    0.9660     0.0000  0.0000 0.0000  0.0340   0.5000         0.0339           0.0003
+         3 Ozellikli Logistic Regression    0.9695     0.6400  0.2353 0.3441  0.5007   0.9401         0.5297           0.0594
+         3 Ozellikli                 KNN    0.9745     0.7931  0.3382 0.4742  0.5368   0.8830         0.5934           0.0440
+         3 Ozellikli       Decision Tree    0.9845     0.7606  0.7941 0.7770  0.6110   0.8927         0.7246           0.0414
+4 Ozellikli + ayarli               Dummy    0.9660     0.0000  0.0000 0.0000  0.0340   0.5000         0.0339           0.0003
+4 Ozellikli + ayarli Logistic Regression    0.9695     0.6400  0.2353 0.3441  0.5007   0.9401         0.5297           0.0594
+4 Ozellikli + ayarli                 KNN    0.9715     1.0000  0.1618 0.2785  0.6067   0.9330         0.6829           0.0464
+4 Ozellikli + ayarli       Decision Tree    0.9895     0.9608  0.7206 0.8235  0.8482   0.9437         0.8830           0.0328
+
+==============================================================================
+DOGRULAMA - ic ice CV (secim yanliligi olmadan tahmini performans)
+==============================================================================
+  Logistic Regression  nested 0.5260 +- 0.0561 | duz CV 0.5297 | dis katlarda secilen: [{'C': 1}, {'C': 1}, {'C': 10}, {'C': 10}, {'C': 1}]
+  KNN                  nested 0.6858 +- 0.0615 | duz CV 0.6829 | dis katlarda secilen: [{'n_neighbors': 25}, {'n_neighbors': 25}, {'n_neighbors': 25}, {'n_neighbors': 15}, {'n_neighbors': 35}]
+  Decision Tree        nested 0.8907 +- 0.0397 | duz CV 0.8830 | dis katlarda secilen: [{'max_depth': 6, 'min_samples_leaf': 10}, {'max_depth': 5, 'min_samples_leaf': 5}, {'max_depth': 6, 'min_samples_leaf': 10}, {'max_depth': 7, 'min_samples_leaf': 10}, {'max_depth': 5, 'min_samples_leaf': 5}]
+
+==============================================================================
+SORU 2c - Accuracy siralamasi vs digerleri (asama 4)
+==============================================================================
+  Accuracy  : Decision Tree (0.9895) > KNN (0.9715) > Logistic Regression (0.9695) > Dummy (0.9660)
+  Precision : KNN (1.0000) > Decision Tree (0.9608) > Logistic Regression (0.6400) > Dummy (0.0000)
+  Recall    : Decision Tree (0.7206) > Logistic Regression (0.2353) > KNN (0.1618) > Dummy (0.0000)
+  F1        : Decision Tree (0.8235) > Logistic Regression (0.3441) > KNN (0.2785) > Dummy (0.0000)
+  PR-AUC    : Decision Tree (0.8482) > KNN (0.6067) > Logistic Regression (0.5007) > Dummy (0.0340)
+
+==============================================================================
+SORU 2d - Secilen model: Karar Agaci, kurallar ve degisken onemi
+==============================================================================
+|--- Guc sapmasi kare <= 6.6
+|   |--- Asinma x Tork <= 10998.5
+|   |   |--- Sicaklik farki [K] <= 8.7
+|   |   |   |--- Rotational speed [rpm] <= 1380.5
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Rotational speed [rpm] >  1380.5
+|   |   |   |   |--- truncated branch of depth 3
+|   |   |--- Sicaklik farki [K] >  8.7
+|   |   |   |--- Tool wear [min] <= 202.5
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Tool wear [min] >  202.5
+|   |   |   |   |--- truncated branch of depth 4
+|   |--- Asinma x Tork >  10998.5
+|   |   |--- Type <= 0.5
+|   |   |   |--- class: 1
+|   |   |--- Type >  0.5
+|   |   |   |--- Asinma x Tork <= 11719.8
+|   |   |   |   |--- class: 0
+|   |   |   |--- Asinma x Tork >  11719.8
+|   |   |   |   |--- class: 0
+|--- Guc sapmasi kare >  6.6
+|   |--- class: 1
+
+               Degisken  Permutasyon onemi  Gini onemi  Turetilmis
+       Guc sapmasi kare                NaN      0.3322        True
+ Rotational speed [rpm]             0.7238      0.2716       False
+          Asinma x Tork             0.3463      0.2477        True
+     Sicaklik farki [K]             0.5093      0.0641        True
+                   Type             0.0531      0.0534       False
+        Tool wear [min]             0.0310      0.0172       False
+                Guc [W]             0.0019      0.0083        True
+            Torque [Nm]             0.6862      0.0050       False
+    Air temperature [K]            -0.0030      0.0004       False
+Process temperature [K]             0.0000      0.0000       False
+
+==============================================================================
+SORU 3a - Maliyet orani -> esik (OOF), sonra testte bir kez
+==============================================================================
+ Oran (1 FN = k FP)   Esik  OOF Recall  OOF FP  Test TP  Test FP  Test FN  Test Recall  Test Precision  Test maliyet
+                  1 0.6667      0.7823       2       49        0       19       0.7206          1.0000            19
+                  5 0.4375      0.8081      20       53        5       15       0.7794          0.9138            80
+                 10 0.1045      0.8413     104       57       17       11       0.8382          0.7703           127
+                 20 0.0145      0.9446     394       61       97        7       0.8971          0.3861           237
+                 50 0.0145      0.9446     394       61       97        7       0.8971          0.3861           447
+Nihai esik 0.1045 | OOF katlarda recall: [0.833 0.907 0.833 0.852 0.782]
+Nihai (test): {'esik': 0.1045, 'TP': 57, 'FP': 17, 'FN': 11, 'TN': 1915, 'Recall': 0.8382, 'Precision': 0.7703, 'F1': 0.8028, 'Accuracy': 0.986, 'PR-AUC': 0.8482, 'ROC-AUC': 0.9437, 'kat_recall': [0.8333333333333334, 0.9074074074074074, 0.8333333333333334, 0.8518518518518519, 0.7818181818181819]}
+                        Politika               Model   Esik  TP  FP  FN   TN  Recall  Precision
+    Ariza kacirma (recall>=0,80) Logistic Regression 0.0365  57 229  11 1703  0.8382     0.1993
+Yanlis alarm sinirla (FPR<=0,10) Logistic Regression 0.0473  57 170  11 1762  0.8382     0.2511
+                    En yuksek F1 Logistic Regression 0.2474  29  26  39 1906  0.4265     0.5273
+    Ariza kacirma (recall>=0,80)                 KNN 0.1200  53  80  15 1852  0.7794     0.3985
+Yanlis alarm sinirla (FPR<=0,10)                 KNN 0.0800  58 138  10 1794  0.8529     0.2959
+                    En yuksek F1                 KNN 0.2800  34  21  34 1911  0.5000     0.6182
+    Ariza kacirma (recall>=0,80)       Decision Tree 0.4375  53   5  15 1927  0.7794     0.9138
+Yanlis alarm sinirla (FPR<=0,10)       Decision Tree 0.0145  61  97   7 1835  0.8971     0.3861
+                    En yuksek F1       Decision Tree 0.6000  49   0  19 1932  0.7206     1.0000
+Bootstrap %95 GA: {'Recall': [0.746, 0.921], 'Precision': [0.672, 0.868], 'PR-AUC': [0.763, 0.92], 'PR-AUC farki (DT-KNN)': [0.145, 0.342]}
+
+==============================================================================
+SORU 3b - Recall artirma denemeleri (OOF, sonra test)
+==============================================================================
+                           Deneme  CV PR-AUC  OOF Recall  OOF Precision  Test Recall  Test FP  Test FN
+        A) Ayarli agac, esik 0,50     0.8830      0.7970         0.9558       0.7206        2       19
+B) A + esik 0.1045 (maliyet 1:10)     0.8830      0.8413         0.6867       0.8382       17       11
+     C) A + class_weight=balanced     0.8354      0.9004         0.4026       0.8971       96        7
+D) A + esik 0.0145 (maliyet 1:20)     0.8830      0.9446         0.3938       0.8971       97        7
+
+Ariza turune gore yakalama (YASAK sutunlar yalnizca hata analizinde, girdi degil):
+     Toplam  Kacirilan  Yakalama %
+TWF      10          8        20.0
+HDF      29          1        96.6
+PWF      13          0       100.0
+OSF      16          0       100.0
+RNF       0          0         NaN
+
+==============================================================================
+SORU 3c - Egitim vs test, derinlik egrisi
+==============================================================================
+              Model      Surum  Egitim PR-AUC  Test PR-AUC   Fark
+Logistic Regression varsayilan         0.5461       0.5007 0.0454
+Logistic Regression     ayarli         0.5461       0.5007 0.0454
+                KNN varsayilan         0.8127       0.5368 0.2759
+                KNN     ayarli         0.7628       0.6067 0.1561
+      Decision Tree varsayilan         1.0000       0.6110 0.3890
+      Decision Tree     ayarli         0.9511       0.8482 0.1029
+max_depth  Egitim PR-AUC  CV PR-AUC  CV sapma  Yaprak
+        2         0.5445     0.5246    0.0801       3
+        3         0.6558     0.6320    0.0711       5
+        4         0.8683     0.8253    0.0611       8
+        5         0.9245     0.8687    0.0376      11
+        6         0.9344     0.8707    0.0317      14
+        7         0.9466     0.8461    0.0262      17
+        8         0.9551     0.8325    0.0279      23
+       10         0.9715     0.7918    0.0478      30
+       12         0.9797     0.7754    0.0330      38
+       15         0.9965     0.7489    0.0439      50
+       20         1.0000     0.7246    0.0414      61
+ sinirsiz         1.0000     0.7246    0.0414      61
+
+==============================================================================
+Sizinti denetimi
+==============================================================================
+  [OK] Yasak sutunlar (TWF/HDF/PWF/OSF/RNF) girdide yok
+  [OK] UDI / Product ID girdide yok
+  [OK] Egitim ve test kesisimi bos
+  [OK] Her UDI tek satir (grup sizintisi yok)
+  [OK] Test kumesi butun asamalarda ayni (2000 satir, hic satir atilmadi)
+  [OK] Nihai egitim satirlari test ile kesismiyor
+  [OK] En guclu tekli degisken ROC-AUC < 0,80
+
+Bitti. Ciktilar: /home/claude/ai4i-ariza-tahmini/outputs

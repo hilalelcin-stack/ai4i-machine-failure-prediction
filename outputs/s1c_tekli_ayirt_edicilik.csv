@@ -1,0 +1,10 @@
+Degisken,ROC-AUC,Yon,Turetilmis
+Guc sapmasi kare,0.7724,bant disi=riskli,True
+Torque [Nm],0.7702,yuksek=riskli,False
+Rotational speed [rpm],0.7667,dusuk=riskli,False
+Tork x Devir,0.7457,yuksek=riskli,True
+Asinma x Tork,0.7044,yuksek=riskli,True
+Sicaklik farki [K],0.6624,dusuk=riskli,True
+Tool wear [min],0.6621,yuksek=riskli,False
+Air temperature [K],0.6327,yuksek=riskli,False
+Process temperature [K],0.5637,yuksek=riskli,False

@@ -1,0 +1,52 @@
+|--- Guc sapmasi kare <= 6.6
+|   |--- Asinma x Tork <= 10998.5
+|   |   |--- Sicaklik farki [K] <= 8.7
+|   |   |   |--- Rotational speed [rpm] <= 1380.5
+|   |   |   |   |--- Sicaklik farki [K] <= 8.6
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- Sicaklik farki [K] >  8.6
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- Rotational speed [rpm] >  1380.5
+|   |   |   |   |--- Tool wear [min] <= 210.5
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- Tool wear [min] >  210.5
+|   |   |   |   |   |--- Rotational speed [rpm] <= 1523.0
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- Rotational speed [rpm] >  1523.0
+|   |   |   |   |   |   |--- class: 0
+|   |   |--- Sicaklik farki [K] >  8.7
+|   |   |   |--- Tool wear [min] <= 202.5
+|   |   |   |   |--- Guc [W] <= 8973.3
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- Guc [W] >  8973.3
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- Tool wear [min] >  202.5
+|   |   |   |   |--- Tool wear [min] <= 224.5
+|   |   |   |   |   |--- Guc [W] <= 6827.3
+|   |   |   |   |   |   |--- Torque [Nm] <= 45.6
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- Torque [Nm] >  45.6
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- Guc [W] >  6827.3
+|   |   |   |   |   |   |--- Air temperature [K] <= 302.3
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- Air temperature [K] >  302.3
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |--- Tool wear [min] >  224.5
+|   |   |   |   |   |--- Rotational speed [rpm] <= 1574.0
+|   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |--- Rotational speed [rpm] >  1574.0
+|   |   |   |   |   |   |--- Tool wear [min] <= 231.5
+|   |   |   |   |   |   |   |--- class: 0
+|   |   |   |   |   |   |--- Tool wear [min] >  231.5
+|   |   |   |   |   |   |   |--- class: 0
+|   |--- Asinma x Tork >  10998.5
+|   |   |--- Type <= 0.5
+|   |   |   |--- class: 1
+|   |   |--- Type >  0.5
+|   |   |   |--- Asinma x Tork <= 11719.8
+|   |   |   |   |--- class: 0
+|   |   |   |--- Asinma x Tork >  11719.8
+|   |   |   |   |--- class: 0
+|--- Guc sapmasi kare >  6.6
+|   |--- class: 1
